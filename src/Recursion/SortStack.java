@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class SortStack {
     public static void insertInStack(Stack<Integer> s,int x){
-        if (s.isEmpty()||s.peek()>x){
+        if (s.isEmpty()||x>s.peek()){
             s.push(x);
             return;
         }
