@@ -8,10 +8,11 @@ public class ReverseString {
         int prev=trimmed.length();
         for (int i = trimmed.length()-1; i >=0 ; i--) {
             if (trimmed.charAt(i)==' '){
-                result=result+trimmed.substring(i,prev);
+                result=result+trimmed.substring(i+1,prev)+" ";
                 prev=i;
             }
         }
+       result += trimmed.substring(0, prev);
         System.out.println(result);
     }
 

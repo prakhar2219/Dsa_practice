@@ -156,17 +156,17 @@ public class LL {
 
 
         first.insertLast(1);
-        first.insertLast(3);
-        first.insertLast(1);
         first.insertLast(2);
+        first.insertLast(3);
         first.insertLast(4);
+        first.insertLast(5);
 
         second.insertLast(3);
         second.insertLast(2);
         second.insertLast(4);
 
-        Node ans=first.findIntersection(first,second);
-        System.out.println(ans.value);
+        first.rotate(first,3);
+        first.display();
     }
 
 
@@ -274,5 +274,18 @@ public class LL {
           revSecond=revSecond.next;
       }
       return intersection;
+    }
+
+
+    void rotate(LL list,int times){
+        for (int i = 0; i < times; i++) {
+            Node temp=list.head;
+            while (temp.next.next!=null){
+                temp=temp.next;
+            }
+            temp.next.next=list.head;
+            list.head=temp.next;
+            temp.next=null;
+        }
     }
 }
