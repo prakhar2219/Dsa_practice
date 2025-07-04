@@ -7,7 +7,7 @@ public class ZigZagTraversal {
     List<List<Integer>> fullList=new ArrayList<>();
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         if (root == null) return fullList;
-        Deque<TreeNode> deque=new LinkedList<>()
+        Deque<TreeNode> deque=new LinkedList<>();
         deque.add(root);
         boolean traversal=true;
        while (!deque.isEmpty()){
